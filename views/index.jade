@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	div(class='fullback', id='mapContainer')
+	div(class='tweetContainer col-md-3')
+		h3
+			| Latest Tweets
+		div(ng-controller="TweetCtrl")
+			span(ng-repeat="tweet in tweets | reverse")
+				tweet
+

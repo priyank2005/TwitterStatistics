@@ -1,0 +1,19 @@
+doctype html
+html(ng-app="app")
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700')
+  body
+    block content
+    script(src='/javascripts/jquery-2.1.1.min.js')
+    script(src='/javascripts/bootstrap.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js')
+    script(src='http://maps.google.com/maps/api/js?sensor=false&language=en')
+    script(src='https://cdn.socket.io/socket.io-1.0.6.js')
+    script(src='/javascripts/gmap3.min.js')
+    script(src='/javascripts/index.js')
+    script(src='/javascripts/directives/directive.js')
+    script(src='/javascripts/filters/filter.js')
+    script(src='/javascripts/services/service.js')
