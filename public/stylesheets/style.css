@@ -6,7 +6,7 @@
     bottom: 0
 }
 * {
-    font-family: 'Josefin Slab', serif
+    font-family: 'Open Sans', sans-serif;
 }
 .post{
     margin-bottom: 5px;
@@ -28,7 +28,8 @@
     -moz-opacity: .95;
     -khtml-opacity: .95;
     opacity: .95;
-    overflow:scroll;
+    overflow:auto;
+    x-overflow: hidden;
 }
 .tweetContainer:hover {
     -ms-filter: "alpha(Opacity=100)";
