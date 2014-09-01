@@ -18,10 +18,6 @@ router.route('/getTweetsForCity').post(function(req, res) {
 router.route('/getAllSupportedCities').post(function(req, res){
 	res.send(twitterWrapper.listAllSupportedCities());
 })
-router.route('/steamTweetsForCity').post(function(req, res){
-	twitterWrapper.streamSearch("_all");
-	res.status(200).send("");
-});
 router.route('/getExistingMarkers').post(function(req,res){
 	res.send(twitterWrapper.getExistingMarkers());
 })
