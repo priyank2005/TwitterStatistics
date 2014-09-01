@@ -5,7 +5,9 @@ block content
 	div(class='tweetContainer col-md-3')
 		h3
 			| Latest Tweets
+		p(class="text-muted")
+			| Latest 20 Tweets from top 20 cities
 		div(ng-controller="TweetCtrl")
-			span(ng-repeat="tweet in tweets | reverse")
+			span(ng-repeat="tweet in tweets | reverse | limitTo:20")
 				tweet
 
