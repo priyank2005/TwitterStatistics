@@ -24,10 +24,10 @@
     -moz-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .75);
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .75);
     -ms-filter: "alpha(Opacity=70)";
-    filter: alpha(opacity=70);
-    -moz-opacity: .7;
-    -khtml-opacity: .7;
-    opacity: .7;
+    filter: alpha(opacity=95);
+    -moz-opacity: .95;
+    -khtml-opacity: .95;
+    opacity: .95;
     overflow:scroll;
 }
 .tweetContainer:hover {

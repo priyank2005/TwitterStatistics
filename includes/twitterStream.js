@@ -1,6 +1,7 @@
 var twitter = require('twitter');
 var twitConfig = require('../configs/twitter.js');
 var citiesConfig = require('../configs/cities.js');
+var twitterApiWrapper = require("./twitterApiWrapper.js");
 var bot = new twitter(twitConfig);
 var tweetsBuffer = new Array();
 var sendTweetsBuffer = new Array();
@@ -30,7 +31,6 @@ var startSocketStream = function (searchTerm){
 		}
 		var _searchCoordinates=searchCoordinates.join(",");
 	}
-	console.log(_searchCoordinates);
 	var params = {
         locations: [_searchCoordinates]
     };
@@ -49,6 +49,8 @@ var startSocketStream = function (searchTerm){
 			        var msg = {};
 					msg.text = tweet.text;
 					msg.location = tweet.place.full_name;
+					msg.coordinates = tweet.place.bounding_box.coordinates[0][0];
+					twitterApiWrapper.addMarkerCoordinates(msg.coordinates);
 					msg.user = {
 						name: tweet.user.name, 
 						image: tweet.user.profile_image_url

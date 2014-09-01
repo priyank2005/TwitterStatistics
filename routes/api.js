@@ -22,6 +22,9 @@ router.route('/steamTweetsForCity').post(function(req, res){
 	twitterWrapper.streamSearch("_all");
 	res.status(200).send("");
 });
+router.route('/getExistingMarkers').post(function(req,res){
+	res.send(twitterWrapper.getExistingMarkers());
+})
 router.route('/getTweetCountForACity').post(function(req, res){
     var cityName=req.param('q', null);
     if (cityName==null){
